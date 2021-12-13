@@ -10,25 +10,26 @@ extern "C" {
 float accX = 0;
 float accY = 0;
 float accZ = 0;
+
 //acceleration threshold for the randomizer to start
 float threshold = 4;
+
 //Huge array with all the students names in the groups.Name length should not exceed 10 characters
-char *names[] = {"Lucia A.", "Antia", "Rodrigo", "Alvaro Al.", "Adriana", "Alvaro Am.", "Claudia", "Laura", "Hugo C.", 
-"Lucia C.", "Cristina", "Aischa", "Raul", "Noemi", "Alejandro", "Hugo S.", "Ivan", "Sheila", "Soraya",/*2A*/
-"Aldan", "Alba", "Aroa", "Brayan", "Nerea", "Sofia", "Yoli", "Javi", "Alexander", "Lucia", "David", "Benxamin", "Pablo", "Brais", "A. Pena", 
-"Nerea", "A. Porrua", "Sarai", "Marta",/*2b*/
-"Cynthia", "Sara", "Lara", "Yaiza", "Gael","Nerea", "Ainhoa", "Alejandro", "Julia", "Alvaro", "Samuel", "Ainara", "Maria", /*3A*/
-"Xulio", "Anxo A.", "Alex", "Anxo B.", "Saray", "Eloy", "Ivan", "Angel", "Ines", "Lucia", "Lorena", "Kevin", "Theodor", /*3b*/
-"Laura ", "Carlos", "Izan", "Claudia","Virginia", "Facundo", "Juan", "Pablo", "Carme", "Daniel", "Samuel", "Marcos", "Sergio", "Rodrigo", /*4*/
-"Alexia", "Laura B.", "Carlos","Christian","Maria", "Uxia", "Laura V.", "Izan", "Claudia","Virginia", "Facundo", "Juan", "Pablo", "Carme", 
-"Daniel", "Samuel", "Marcos V.", "Sergio", "Rodrigo", "Marcos C.", "Pedro" /*TICS*/};
+char *names[] = {
+  "AA", "BB", "CC", "DD", "EE", "FF",/*2A*/
+  "GG", "HH", "II", "JJ", /*2b*/
+  "KK", "LL", "MM", "NN", /*3A*/
+  "OO", "PP", /*3b*/
+  "QQ ", "RR", "SS", "TT","UU",  /*4*/
+  "VV", "XX", "YY","ZZ" /*TICS*/
+  };
 //with this two variables we define the limits of each group in the names array
 int startName = 0;
 int endName = 2;
+
 // this are the groups we have
 char *groups[] = {"2A", "2B", "3A", "3B", "4", "TIC"};
 int group = 0;
-
 
 void setup() {
   M5.begin(); //Init M5StickC Plus.  初始化 M5StickC Plus
@@ -45,8 +46,6 @@ void setup() {
   //we print out the group which we are going to randomize
   M5.Lcd.setTextColor(YELLOW);
   M5.Lcd.println(groups[group]);
-  
-  
 }
 
 
@@ -110,8 +109,8 @@ void loop() {
     M5.Lcd.print("Contesta");
     //little loop for dramatic purposes
     for (int i = 0; i<6;i++){
-    delay(300);
-    M5.Lcd.print(".");
+      delay(300);
+      M5.Lcd.print(".");
     }
     M5.Lcd.setTextSize(3);
     M5.Lcd.setTextColor(BLUE);
