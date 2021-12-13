@@ -63,31 +63,31 @@ void loop() {
       case 0:
       //2a
       startName = 0;
-      endName = 18;
+      endName = 5;
       break;
       case 1:
       //2b
-      startName = 19;
-      endName = 37;
+      startName = 6;
+      endName = 9;
       break;
       case 2:
       //3a
-      startName = 38;
-      endName = 50;
+      startName = 10;
+      endName = 13;
       break;
       case 3:
       //3b
-      startName = 51;
-      endName = 63;
+      startName = 14;
+      endName = 15;
       break;
       case 4:
       //4 tecno
-      startName = 64;
-      endName = 77;
+      startName = 16;
+      endName = 20;
       break;
       default:
-      startName = 78;
-      endName = 98;
+      startName = 21;
+      endName = 24;
       break;
     }
     M5.Lcd.setCursor(10, 85);
